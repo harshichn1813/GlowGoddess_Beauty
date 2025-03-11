@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/Logo.jpg" alt="Snack Store Logo">
+                    <span></span>
+                </a>
+            </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="cart.html">Cart</a>
+            <div id="user-section">
+                <a href="login.html" id="login-link">Login</a>
+            </div>
+        </nav>
+    </header>
+    <div class="filter-container">
+        <input type="text" id="search-bar" placeholder="Search for products..." oninput="filterProducts()">
+        <select id="category-filter" onchange="filterProducts()">
+            <!-- <option value="all">All Categories</option> -->
+        </select>
+    </div>
+
+    <main>
+       
+        <div class="product-list"></div>  
+    </main>
+
+    <script type="module" src="js/products.js"></script>
+</body>
+<!-- Simple Footer -->
+<footer>
+    <p>&copy; 2025 GlowGoddess Beauty  | All rights reserved</p>
+</footer>
+<script src="js/auth.js" type="module" defer></script>
+</html>

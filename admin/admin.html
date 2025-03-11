@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="../css/admin.css" />
+</head>
+<body>
+  <!-- ✅ Responsive Admin Navigation Bar -->
+  <nav class="navbar">
+    <div class="menu-toggle">&#9776;</div>
+    <div class="nav-links">
+      <a href="admin.html">Edit Products</a>
+      <a href="reports.html">Report Generation</a>
+      <button id="logout-btn">Logout</button>
+    </div>
+  </nav>
+
+  <!-- ✅ Admin Panel Content -->
+  <div id="admin-panel" style="display: none;">
+    <div class="product-form">
+      <h2>Admin Panel - Manage Products</h2>
+      <form id="add-product-form">
+        <div class="form-row">
+          <input type="text" id="name" placeholder="Product Name" required />
+        </div>
+        <div class="form-row">
+          <input type="text" id="credit" placeholder="Credit" required />
+        </div>
+        <div class="form-row">
+          <input type="url" id="img-url" placeholder="Image URL" required />
+        </div>
+        <div class="form-row">
+          <input type="text" id="description" placeholder="Description" required />
+        </div>
+        <div class="form-row">
+          <input type="number" id="price" placeholder="Price" required />
+        </div>
+        <div class="form-row">
+          <input type="number" id="stock" placeholder="Stock Quantity" required />
+        </div>
+        <div class="form-row">
+          <select id="stock-status" required>
+            <option value="visible">Visible</option>
+            <option value="hidden">Hidden</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <button type="submit">Add Product</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- ✅ Product Listing -->
+    <div id="Products-container" class="product-listing"></div> 
+
+    <!-- ✅ Pagination -->
+    <div class="form-row">
+      <button id="next-btn" class="next-button">Next</button>
+    </div>
+  </div>
+
+  <script src="../js/admin.js" type="module" defer></script>
+</body>
+</html>
